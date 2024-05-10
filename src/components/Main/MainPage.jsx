@@ -8,8 +8,8 @@ import { useState } from 'react';
 
 const SiteMain = styled.main`
   margin-top: 80px;
-  padding-left: var(--site-edge-margin);
-  padding-right: var(--site-edge-margin);
+  padding-left: 15px;
+  padding-right: 15px;
   background-color: inherit;
 `
 const MainContainer = styled.div`
@@ -24,17 +24,17 @@ const RegisterTitle = styled.h2`
   font-weight: 700;
   font-size: 32px;
   line-height: 38px;
-  color: black;
+  color: #2A2A2A;
 `
 
 function MainPage() {
-  const [shopPhase, setShopPhase] = useState(1);
+  const [shopPhase, setShopPhase] = useState(2);
 
   return (
   <>
     <SiteMain>
       <MainContainer>
-        <section className="register-container col col-lg-6 col-sm-12" data-phase="1" data-totalprice="0">
+        <section className="register-container col col-lg-6 col-sm-12" data-totalprice="0">
           <RegisterTitle className = 'col col-12'>結帳</RegisterTitle>
           <StepProgress shopPhase={shopPhase}/>
           <Form shopPhase={shopPhase}/>
