@@ -28,7 +28,7 @@ const RegisterTitle = styled.h2`
 `
 
 function MainPage() {
-  const [shopPhase, setShopPhase] = useState(3);
+  const [shopPhase, setShopPhase] = useState(1);
 
   return (
   <>

@@ -17,21 +17,21 @@ $screen-break-point: 749.5px;
     }
 }
 %current-text {
-    color: var(--progress-current-color);
+    color: #2A2A2A;
 }
 %current-icon {
     @extend %current-text;
     background-color: transparent;
-    border: 1px solid var(--progress-current-color);
+    border: 1px solid #2A2A2A;
     @extend %undone-phase;
 }
 %undone-text {
-    color: var(--progress-undone-color);
+    color: #AFB1BD;
 }
 %undone-icon {
     @extend %undone-text;
     background-color: transparent;
-    border: 1px solid var(--progress-undone-color);
+    border: 1px solid #AFB1BD;
     @extend %undone-phase;
 }
 %done-text {
@@ -62,14 +62,15 @@ section.progress-container {
 
     .progress-group {
         display: flex;
+        // align-items: center;
 
         .progress-icon {
             display: inline-block;
             position: relative;
-            width: 27px;
-            height: 27px;
+            width: 24px;
+            height: 24px;
             margin-right: 8px;
-            border-radius: 50%;
+            border-radius: 50%;          
 
             .text {
                 width: inherit;
@@ -80,7 +81,8 @@ section.progress-container {
                 font-weight: 700;
                 line-height: 24px;
                 text-align: center;
-                color: inherit;
+                border: 1px solid black;
+                border-radius: 50%;
             }
             .icon {
                 width: inherit;
