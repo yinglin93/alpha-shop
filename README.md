@@ -43,10 +43,10 @@ Ctrl+c
 ```
 
 ## Built with
-*Node.js 18.15.0
-*React 18.2.0
-*sass 1.75.0
-*styled-components 6.1.8
+* Node.js 18.15.0
+* React 18.2.0
+* sass 1.75.0
+* styled-components 6.1.8
 
 
 ## Authors
