@@ -22,7 +22,6 @@ function PreStep({shopPhase, setShopPhase}){
 
 function NextStep({nextStep, shopPhase, setShopPhase}){
   const goNextStep = () => {
-    console.log(shopPhase)
     if (shopPhase < 3) {
       setShopPhase(shopPhase+1);
     }

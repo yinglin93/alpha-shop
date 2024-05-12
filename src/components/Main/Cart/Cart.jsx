@@ -3,12 +3,20 @@ import product1 from '../../../Assets/images/product-1.jpg'
 import product2 from '../../../Assets/images/product-2.jpg'
 import minus from '../../../Assets/icons/minus.svg'
 import plus from '../../../Assets/icons/plus.svg'
+import {useState} from 'react'
 
-function ProductContainer({dataCount, dataPrice, name, productImage,}) {
+function ProductContainer({ dataCount, setDataCount, dataPrice, name, productImage }) {
+  const handleSubstract = () => {
+    if (dataCount >= 1) {
+      setDataCount(dataCount-1)
+    } 
+  }
+  const handleAdd = () => {
+    setDataCount(dataCount+1)
+  }
   return (
     <div
       className="product-container col col-12"
-      data-count={dataCount}
       data-price={dataPrice}
     >
       <img className="img-container" src={productImage} alt='imgContainer' />
@@ -16,17 +24,13 @@ function ProductContainer({dataCount, dataPrice, name, productImage,}) {
         <div className="product-name">{name}</div>
         <div className="product-control-container">
           <div className="product-control">
-            <object
-              className="product-action minus"
-              data={minus}
-              aria-label='minusIcon'
-            />
+            <button className="product-action minus" onClick={handleSubstract}>
+              <img src={minus} alt="minisIcon" />
+            </button>
             <span className="product-count">{dataCount}</span>
-            <object
-              className="product-action minus"
-              data={plus}
-              aria-label='plusIcon'
-            />
+            <button className="product-action minus" onClick={handleAdd}>
+              <img src={plus} alt="plusIcon" />
+            </button>
           </div>
         </div>
         <div className="price">{'$' + dataPrice}</div>
@@ -35,20 +39,25 @@ function ProductContainer({dataCount, dataPrice, name, productImage,}) {
   );
 }
 
+
 function Cart() {
+  const [dataCount, setDataCount] = useState(0)
+
   return (
     <>
       <section className="cart-container col col-lg-5 col-sm-12">
         <h3 className="cart-title">購物籃</h3>
         <section className="product-list col col-12" data-total-price={0}>
           <ProductContainer 
-            dataCount = {0}
+            dataCount = {dataCount}
+            setDataCount = {setDataCount}
             dataPrice = {3999}
             name = '破壞補丁修身牛仔褲'
             productImage = {product1}
             />
           <ProductContainer 
-            dataCount = {0}
+            dataCount = {dataCount}
+            setDataCount = {setDataCount}
             dataPrice = {1299}
             name = '刷色直筒牛仔褲'
             productImage = {product2}
