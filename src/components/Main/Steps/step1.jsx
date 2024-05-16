@@ -1,5 +1,5 @@
 import './step1.scss';
-import { InputGroup, InputGroupContainer, InputText } from './Step3';
+import { InputGroup, InputGroupContainer, InputText } from './InputGroup';
 
 
 function Step1() {
