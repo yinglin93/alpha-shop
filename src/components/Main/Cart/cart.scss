@@ -46,26 +46,6 @@ section.product-list {
                 order: 1;
             }
 
-            .product-control {
-                display: flex;
-                width: 116px;
-                margin-top: 18px;
-                margin-bottom: 17px;
-                justify-content: space-between;
-                align-items: center;
-
-                .product-action {
-                    display: inline-block;
-                    width: 27px;
-                    height: 26px;
-                    cursor: pointer;
-                }
-
-                .product-count {
-                    display: inline-block;
-                }
-            }
-
             .price {
                 font-size: 16px;
                 line-height: 22px;
@@ -95,9 +75,4 @@ section.cart-info {
         line-height: 17px;
         color: #000000;
     }
-}
-
-button {
-    border: none;
-    background-color: transparent;
 }

@@ -1,9 +1,8 @@
 import './cart.scss';
-import minus from '../../../Assets/icons/minus.svg'
-import plus from '../../../Assets/icons/plus.svg'
+import QuantityBtn from './QuantityBtn'
 import { useState } from 'react'
 
-const product = [
+const products = [
   {
     id: '1',
     name: '貓咪罐罐',
@@ -20,42 +19,20 @@ const product = [
   },
 ]
 
-
-
 function ProductContainer({ dataCount, setDataCount }) {
-  // fix btn function later 
-  const handleSubstract = () => {
-    console.log(dataCount)
-    if (dataCount >= 1) {
-      setDataCount(dataCount-1)
-    } 
-  }
-  const handleAdd = () => {
-    setDataCount(dataCount+1)
-  }
-
-  const productList = product.map(item =>
-    <div className="product-container col col-12" key={item.id}>
-      <img className="img-container" src={item.img} alt='imgContainer' />
+  const productList = products.map(product =>
+    <div className="product-container col col-12" key={product.id}>
+      <img className="img-container" src={product.img} alt='imgContainer' />
       <div className="product-info">
-        <div className="product-name">{item.name}</div>
+        <div className="product-name">{product.name}</div>
         <div className="product-control-container">
-          <div className="product-control">
-            <button className="product-action minus" onClick={handleSubstract}>
-              <img src={minus} alt="minisIcon" />
-            </button>
-            <span className="product-count">{item.quantity}</span>
-            <button className="product-action minus" onClick={handleAdd}>
-              <img src={plus} alt="plusIcon" />
-            </button>
-          </div>
+          <QuantityBtn dataCount={dataCount} setDataCount={setDataCount} quantity={product.quantity} />
         </div>
-        <div className="price">{'$' + item.price}</div>
+        <div className="price">{'$' + product.price}</div>
       </div>
     </div>  
-  );
-
-  return <>{productList}</> ;
+  )
+  return <>{productList}</>
 }
 
 
