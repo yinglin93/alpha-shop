@@ -5,10 +5,12 @@ This is the React exercise from ALpha Camp for practicing react component
 ## Features
 
 * Switch the check out progress by clinking previous/next button
+* Rendering Cart by initial data (update at 2024/05/16)
 
 ## Screenshot
 
-<img width="767" alt="image" src="https://github.com/yinglin93/alpha-shop/assets/152006237/af08802f-2f74-41a9-94ab-614bf445016a">
+<img width="684" alt="image" src="https://github.com/yinglin93/alpha-shop/assets/152006237/0e70688c-f082-48e3-9989-fec081a9b0f1">
+
 
 
 
