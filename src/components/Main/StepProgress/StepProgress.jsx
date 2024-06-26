@@ -22,7 +22,11 @@ function ProgressGroup({progressLabel, phase, dataPhase, shopPhase}) {
 
 function ProgressBar({dataOrder, shopPhase}) {
   return (
-    <span className="progress-bar" data-order={dataOrder} style={{borderColor: shopPhase >= dataOrder ? '#000000' : '#F0F0F5'}}/>
+    <span 
+      className="progress-bar" 
+      data-order={dataOrder} 
+      style={{borderColor: shopPhase >= dataOrder ? '#000000' : '#F0F0F5'}}
+    />
   );
 }
 

@@ -34,7 +34,7 @@ function MainPage() {
   <>
     <SiteMain>
       <MainContainer>
-        <section className="register-container col col-lg-6 col-sm-12" data-totalprice="0">
+        <section className="register-container col col-lg-6 col-sm-12">
           <RegisterTitle className = 'col col-12'>結帳</RegisterTitle>
           <StepProgress shopPhase={shopPhase}/>
           <Form shopPhase={shopPhase}/>
