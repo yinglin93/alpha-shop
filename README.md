@@ -6,6 +6,7 @@ This is the React exercise from ALpha Camp for practicing react component
 
 * Switch the check out progress by clinking previous/next button
 * Rendering Cart by initial data (update at 2024/05/16)
+* Increase or decrease the product count by clicking the plus or minus icon and calculate the total price in the Cart (update at 2024/06/27)
 
 ## Screenshot
 
