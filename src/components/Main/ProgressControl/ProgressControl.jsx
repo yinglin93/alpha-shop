@@ -39,8 +39,7 @@ function NextStep({nextStep, shopPhase, setShopPhase}){
 }
 
 function ProgressControl({shopPhase, setShopPhase}) {
-  return (
-    <>
+  return ( 
     <section className="progress-control-container col col-lg-6 col-sm-12">
       <section className="button-group col col-12">
         {shopPhase === 1 &&
@@ -76,7 +75,6 @@ function ProgressControl({shopPhase, setShopPhase}) {
         }
        </section> 
     </section>
-    </>
   );
 }
 

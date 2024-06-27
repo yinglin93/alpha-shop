@@ -32,15 +32,13 @@ function ProgressBar({dataOrder, shopPhase}) {
 
 function StepProgress({shopPhase}) {
   return (
-    <> 
-      <section className="progress-container col col-12">
-        <ProgressGroup progressLabel='寄送地址' phase={1} dataPhase='address' shopPhase={shopPhase}/>
-        <ProgressBar dataOrder='1' shopPhase={shopPhase}/>
-        <ProgressGroup progressLabel='運送方式' phase={2} dataPhase='shipping' shopPhase={shopPhase}/>
-        <ProgressBar dataOrder='2' shopPhase={shopPhase}/>
-        <ProgressGroup progressLabel='付款資訊' phase={3} dataPhase='credit-card' shopPhase={shopPhase}/>
-      </section>
-    </>
+    <section className="progress-container col col-12">
+      <ProgressGroup progressLabel='寄送地址' phase={1} dataPhase='address' shopPhase={shopPhase}/>
+      <ProgressBar dataOrder='1' shopPhase={shopPhase}/>
+      <ProgressGroup progressLabel='運送方式' phase={2} dataPhase='shipping' shopPhase={shopPhase}/>
+      <ProgressBar dataOrder='2' shopPhase={shopPhase}/>
+      <ProgressGroup progressLabel='付款資訊' phase={3} dataPhase='credit-card' shopPhase={shopPhase}/>
+    </section>
   );
 }
 
