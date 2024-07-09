@@ -1,4 +1,6 @@
 import './inputGroup.scss'
+import { useContext } from 'react';
+import { CardContext } from '../CardContext.jsx'
 
 export function InputGroupContainer ({children}) {
   return (
@@ -16,8 +18,9 @@ export function InputGroup({inputLabel, width, children}){
   );
 }
 
-export function InputText({placeHolder}){
+export function InputText({placeHolder, formName}){
+  const { handleChange } = useContext(CardContext)
   return (
-    <input type="text" placeholder={placeHolder} />
+    <input type="text" placeholder={placeHolder}  name={formName} onChange={e => handleChange(e)}/>
   );
 }

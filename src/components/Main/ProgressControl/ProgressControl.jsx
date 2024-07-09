@@ -1,6 +1,8 @@
 import './progressControl.scss';
 import rightArrow from '../../../Assets/icons/right-arrow.svg'
 import leftArrow from '../../../Assets/icons/left-arrow.svg'
+import { useContext } from 'react';
+import { CardContext } from '../CardContext';
 
 function PreStep({shopPhase, setShopPhase}){
   const goPreStep = () => {
@@ -21,14 +23,16 @@ function PreStep({shopPhase, setShopPhase}){
 }
 
 function NextStep({nextStep, shopPhase, setShopPhase}){
-  const goNextStep = () => {
+  const { handleSubmit } = useContext(CardContext)
+  const goNextStep = (e) => {
+    handleSubmit(e);
     if (shopPhase < 3) {
       setShopPhase(shopPhase+1);
     }
   }
 
   return (
-    <button className="next" onClick={goNextStep}>
+    <button className="next" onClick={(e) => goNextStep(e)}>
       {nextStep}
       <object
         data={rightArrow}

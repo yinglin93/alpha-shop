@@ -1,10 +1,12 @@
-import styled from 'styled-components'
-import StepProgress from './StepProgress/StepProgress.jsx'
-import Form from './Steps/Form.jsx'
-import Cart from './Cart/Cart.jsx'
-import ProgressControl from './ProgressControl/ProgressControl.jsx'
+import styled from 'styled-components';
+import StepProgress from './StepProgress/StepProgress.jsx';
+import Form from './Steps/Form.jsx';
+import Cart from './Cart/Cart.jsx';
+import ProgressControl from './ProgressControl/ProgressControl.jsx';
 
 import { useState } from 'react';
+import { CartContextProvider } from './Cart/CartContext.jsx';
+import { CardContextProvider } from './CardContext.jsx';
 
 const SiteMain = styled.main`
   margin-top: 80px;
@@ -34,13 +36,17 @@ function MainPage() {
   <>
     <SiteMain>
       <MainContainer>
-        <section className="register-container col col-lg-6 col-sm-12">
-          <RegisterTitle className = 'col col-12'>結帳</RegisterTitle>
-          <StepProgress shopPhase={shopPhase}/>
-          <Form shopPhase={shopPhase}/>
-        </section>
-        <Cart/>
-        <ProgressControl shopPhase={shopPhase} setShopPhase={setShopPhase}/>
+        <CartContextProvider>
+          <CardContextProvider>
+            <section className="register-container col col-lg-6 col-sm-12">
+                <RegisterTitle className = 'col col-12'>結帳</RegisterTitle>
+                  <StepProgress shopPhase={shopPhase}/>
+                  <Form shopPhase={shopPhase}/>
+            </section>
+            <Cart/>
+            <ProgressControl shopPhase={shopPhase} setShopPhase={setShopPhase}/>  
+          </CardContextProvider>
+        </CartContextProvider>
       </MainContainer>
     </SiteMain>
   </>
