@@ -1,12 +1,12 @@
-import './step3.scss';
 import { InputGroup, InputGroupContainer, InputText } from './InputGroup';
+import { FormBody, FormTitle } from './FormStyle.jsx';
 
 function Step3() {
   return (
     <>
       <form className="col col-12" data-phase="credit-card">
-        <h3 className="form-title">付款資訊</h3>
-        <section className="form-body col col-12">
+        <FormTitle>付款資訊</FormTitle>
+        <FormBody>
           <InputGroupContainer>
             <InputGroup inputLabel='持卡人姓名' width='col-6'>
               <InputText placeHolder='John Doe' formName='cardOwnerName'/>
@@ -25,7 +25,7 @@ function Step3() {
               <InputText placeHolder='123' formName='cardCCVNumber'/>
             </InputGroup>
           </InputGroupContainer>
-        </section>
+        </FormBody>
       </form>
     </>
   );

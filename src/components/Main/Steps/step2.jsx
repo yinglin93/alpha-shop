@@ -1,11 +1,11 @@
-import './step2.scss';
+import { FormBody, FormTitle } from './FormStyle.jsx';
 
 function Step2() {
   return (
     <>
       <form className="col col-12" data-phase="shipping">
-        <h3 className="form-title">運送方式</h3>
-        <section className="form-body col col-12">
+        <FormTitle>運送方式</FormTitle>
+        <FormBody>
           <label className="radio-group col col-12" data-price={0}>
             <input
               id="shipping-standard"
@@ -33,7 +33,7 @@ function Step2() {
             </div>
             <div className="radio-box-border" />
           </label>
-        </section>
+        </FormBody>
       </form>
     </>
   );

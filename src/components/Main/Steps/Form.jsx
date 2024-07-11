@@ -4,6 +4,7 @@ import Step2 from './Step2'
 import Step3 from './Step3'
 
 const FormContainer = styled.section`
+  width: 100%;
   display: flex;
   margin-top: 64px;
 `

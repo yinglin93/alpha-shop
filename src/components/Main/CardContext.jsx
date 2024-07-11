@@ -14,7 +14,7 @@ function CardContextProvider({ children }) {
   })
   
   const handleChange = (e) => {
-    const { name, value} = e.target;
+    const { name, value } = e.target;
     setCardInfo({
       ...CardInfo,
       [name]: value
